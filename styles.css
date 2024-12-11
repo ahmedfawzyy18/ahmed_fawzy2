@@ -1,0 +1,309 @@
+/* إعدادات أساسية للجسم */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #232323;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* تحديد شكل البانر */
+#banner {
+    background: url('images/web banner.jpg') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.8;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.banner-content h1 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 10px;
+    animation: slideIn 1.5s ease-out;
+}
+
+.banner-content p {
+    font-size: 20px;
+    color: #fff;
+    animation: fadeInText 2s ease-in-out;
+}
+
+/* تأثيرات التحرك للنصوص */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* تحسين شكل الهيدر */
+header {
+    background-color: #6cc24b;
+    padding: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #232323;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* تأثيرات التحرك عند المرور على الروابط */
+nav ul li a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #9bec00;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* تحسين شكل قسم عنّي */
+#about {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #343434;
+    animation: fadeIn 3s ease-in-out;
+}
+
+#about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #dcdcdc;
+}
+
+/* قسم الأعمال (مشاريع) */
+#works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+}
+
+.work-item {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.work-item a {
+    text-decoration: none;
+    color: #9bec00;
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.work-item a:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* تأثير التحرك عند المرور على العنصر */
+.work-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* تحسين شكل الـ Pop-up */
+/* تحسين شكل الـ Pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px;
+    overflow: auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 40px;
+    width: 90%; /* زيادة العرض ليشغل مساحة أكبر */
+    max-width: 1200px; /* زيادة الحجم الأقصى للـ popup */
+    text-align: center;
+    border-radius: 8px;
+    animation: slideUp 1s ease-out;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 600px; /* زيادة الحد الأقصى للارتفاع */
+}
+
+.popup h3 {
+    color: #232323;
+    font-size: 28px; /* تكبير حجم النص داخل الـ Pop-up */
+    margin-bottom: 20px;
+}
+
+/* تأثير التحرك للـ Popup */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* تحسين شكل الـ Close Button */
+.popup .close {
+    color: #232323;
+    font-size: 40px; /* تكبير حجم زر الإغلاق */
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.popup .close:hover,
+.popup .close:focus {
+    color: #9bec00;
+    text-decoration: none;
+}
+
+
+/* تحسين قسم التواصل */
+#contact {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #2a2a2a;
+    animation: fadeIn 4s ease-in-out;
+}
+
+#contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #dcdcdc;
+}
+
+#contact a {
+    color: #9bec00;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #fff;
+}
+
+/* تحسين استجابة الموقع للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 36px;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+    }
+
+    .work-item {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    #about h2,
+    #contact h2 {
+        font-size: 30px;
+    }
+
+    #works {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}

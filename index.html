@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ahmed Fawzy - Graphic Designer</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Pop-up window styles */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+            overflow: auto;
+        }
+
+        .popup-content {
+            position: relative;
+            margin: auto;
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .popup img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .close {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #f44336;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Banner styles */
+        #banner {
+            position: relative;
+            background-color: #333;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        /* Adding transparency to the banner image */
+        #banner img {
+            width: 100%;
+            height: auto;
+            opacity: 0.6; /* Transparency effect */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Keep the image behind the text */
+        }
+
+        #banner .banner-content {
+            position: relative;
+            z-index: 1; /* Ensure text appears on top of the image */
+            color: #fff;
+        }
+
+        /* Work Section */
+        #works .work-item {
+            margin-bottom: 30px;
+        }
+        
+        #works .work-item a {
+            font-size: 18px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        /* Other Section styles */
+        section {
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="banner">
+    <div class="banner-content">
+        <h1>Ahmed Fawzy</h1>
+        <p>Freelance Graphic Designer specializing in graphic design, motion graphics, and visual identity.</p>
+    </div>
+    <img src="web banner.jpg" alt="Ahmed Fawzy Banner">
+</section>
+
+<section id="about">
+    <h2 style="color: white;">About Me</h2>
+    <p>Hello! I'm Ahmed Fawzy, a freelance graphic designer with more than two years of experience. I've been working in the design field, specializing in graphic design, motion graphics, and visual identity for various brands. I’ve worked with clients from different industries to bring their vision to life with unique and effective designs.</p>
+</section>
+
+
+<section id="works">
+
+
+
+  
+
+  <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">Modal 1</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          بروفايل شركة مصدر امان في السعودية
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal">Open second modal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel4">Modal 2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img style="width: 100%;" src="مشروع 1.jpg" alt="">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Back to first</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <button class="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Open First Project</button>
+  
+  <div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel5" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel5">Modal 1</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          تصميم سوشيال ميديا لليوم الوطني السعودي 94
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal">Open second modal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="exampleModalToggle6" aria-hidden="true" aria-labelledby="exampleModalToggleLabel6" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel6">Modal 2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img style="width: 100%;" src="مشروع 2.jpg" alt="">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">Back to first</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal">Open Second Project</button>
+  <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel1">Modal 1</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          تصميم سوشيال ميديا لمطعم بيتزا
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img style="width: 100%;" src="مشروع 3.jpg" alt="">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">Back to first</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <button class="btn btn-primary" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">Open Third Project</button>
+  
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2 style="color: #fff;">Contact Me</h2>
+    <p>If you have any inquiries or wish to get in touch with me for your design needs, feel free to contact me via email: <a href="mailto:ahmedgraphicdesigner366@gmail.com">ahmedgraphicdesigner366@gmail.com</a></p>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
